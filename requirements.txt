@@ -1,0 +1,16 @@
+# Core API framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.4.2
+
+# Astronomical data sources
+astroquery==0.4.6  # NASA JPL Horizons
+astropy==5.3.4     # Required by astroquery/poliastro
+requests>=2.31.0   # HTTP requests for MPC, Space-Track
+
+# Scientific computing and orbital mechanics
+numpy==1.24.3
+scipy>=1.11.0      # For numerical integration
+poliastro==0.17.0  # Advanced orbital mechanics
+pandas==2.0.3      # Data handling
+python-dateutil==2.8.2
