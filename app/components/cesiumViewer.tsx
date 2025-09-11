@@ -11,6 +11,7 @@ import {
   JulianDate,
 } from "cesium";
 import "cesium/Build/Cesium/Widgets/widgets.css";
+import MissionControl from "./MissionControl";
 
 Ion.defaultAccessToken = process.env.NEXT_PUBLIC_CESIUM_ION_TOKEN || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YjIxYjgyYy01NWNiLTRiYTMtODM1OC05Yjc2NjkwNTBmY2IiLCJpZCI6MzQwMTY2LCJpYXQiOjE3NTc1MjEwNTd9._FD4RBe-8LYXN2BT5GNwNqFFzSyHnKsMaY8w_kSodEw";
 
@@ -91,6 +92,11 @@ export default function CesiumViewer() {
     };
   }, []);
 
-  return <div ref={containerRef} style={{ width: "100%", height: "100vh" }} />;
+  return (
+    <div style={{ position: "relative", width: "100%", height: "100vh" }}>
+      <div ref={containerRef} style={{ width: "100%", height: "100vh" }} />
+      <MissionControl />
+    </div>
+  );
 }
 
